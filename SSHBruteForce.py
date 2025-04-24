@@ -7,7 +7,7 @@ host = "127.0.0.1"
 username = "kali"
 attempts = 0
 
-#open a brute force password txt file as a list
+#open a brute force password txt file as a list (your password list will have to be in the same directory, in my case it is called myBFlist.txt)
 
 with open("myBFlist.txt", "r") as password_list:
   #for each of those password, we want to strip the spaces to clean the passwords
