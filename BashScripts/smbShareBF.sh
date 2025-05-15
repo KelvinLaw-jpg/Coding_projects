@@ -23,7 +23,7 @@ while read -r SHARE; do
   if [ $? -eq 0 ]; then # $? is a special shell variable that holds the exit status of the last command executed
     echo "[+] Anonymous access allowed for: $SHARE" # Write out the valid share
   else
-    echo "[+] Access denied for: $SHARE"
+    echo "[-] Access denied for: $SHARE"
   fi
 done < "$WORDLIST" # directs $WORDLIST (in this case the location of the txt) into stdin
  
