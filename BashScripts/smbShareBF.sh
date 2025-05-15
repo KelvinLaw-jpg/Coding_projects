@@ -20,7 +20,7 @@ while read -r SHARE; do
 # If the command succeeds (e.g., anonymous login worked, ls ran without errors), then $? will be 0.
 # If the command fails (e.g., anonymous login denied, share not found, network error), then $? will be a non-zero number (like 1, 2, etc.) indicating failure.
 
-  if [ $? eq 0 ]; then # $? is a special shell variable that holds the exit status of the last command executed
+  if [ $? -eq 0 ]; then # $? is a special shell variable that holds the exit status of the last command executed
     echo "[+] Anonymous access allowed for: $SHARE" # Write out the valid share
   else
     echo "[+] Access denied for: $SHARE"
